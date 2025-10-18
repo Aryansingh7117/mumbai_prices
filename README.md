@@ -10,22 +10,28 @@ This project predicts house prices based on features like BHK, area, region, and
 
 ---
 
-## ⚙️ Steps Involved
+## 🧰 Tech Stack
 
-### 1️⃣ Data Cleaning
-- Removed missing or invalid entries.
-- Converted all price values into Lakh.
-- Selected key columns: `bhk`, `area`, `region`, `status`, and `price_lakh`.
+| Category | Tools / Libraries Used |
+|-----------|------------------------|
+| **Language** | Python |
+| **Data Handling** | pandas, NumPy |
+| **Modeling** | Linear Regression |
+| **Preprocessing** | OneHotEncoder, StandardScaler |
+| **Environment** | Jupyter Notebook / VS Code |
+| **Version Control** | Git & GitHub |
 
 ---
+## 👨‍💻 Author
 
-### 2️⃣ Encoding
-Converted categorical columns into numeric format using OneHotEncoding:
+**Aryan [Aryansingh7117]**
 
-```python
-from sklearn.preprocessing import OneHotEncoder
-encoder = OneHotEncoder(sparse_output=False)
-encoded = encoder.fit_transform(df[['type','status','age']])
-encoded_df = pd.DataFrame(encoded, columns=encoder.get_feature_names_out(['type','status','age']))
-df = pd.concat([df, encoded_df], axis=1).drop(['type','status','age'], axis=1)
+Aspiring Software Engineer passionate about **Machine Learning** and **Backend Development**.  
+I love building real-world AI projects that combine clean data processing with practical model design.
+
+📫 Reach me at: [aryansingh7117@gmail.com]  
+🌐 GitHub: [https://github.com/Aryansingh7117](https://github.com/Aryansingh7117)
+
+
+
 
